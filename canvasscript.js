@@ -56,7 +56,7 @@ class gestisciArea{
             myArea.x = e.pageX;
             myArea.y = e.pageY;
         });
-        window.addEventListener('touchmove', function (e) {
+        window.addEventListener('touchstart', function (e) {
             myArea.x = e.touches[0].screenX;
             myArea.y = e.touches[0].screenY;
         });
