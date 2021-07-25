@@ -46,16 +46,16 @@ class gestisciArea{
     listen(dao){
       if(dao instanceof component){
 	this.interval = setInterval(funupdate, 60, this, dao);
-	window.addEventListener('mouseup', function (e) {
+	/*window.addEventListener('mouseup', function (e) {
 	   finespostaplayer(dao);
-	});
+	});*/
 	window.addEventListener('touchend', function (e) {
 	   finespostaplayer(dao);
 	});
-	window.addEventListener('mousemove', function (e) {
+	/*window.addEventListener('mousemove', function (e) {
             myArea.x = e.pageX;
             myArea.y = e.pageY;
-        });
+        });*/
         window.addEventListener('touchstart', function (e) {
             myArea.x = e.touches[0].screenX;
             myArea.y = e.touches[0].screenY;
