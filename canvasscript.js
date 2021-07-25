@@ -126,8 +126,8 @@ function funupdate(area, component){
 		if(i!=component.num) red[i].update();
 	}
 	palla.update();
-	document.getElementById("luchino").innerHTML=area.x;
-	document.getElementById("luchina").innerHTML=area.y;
+	document.getElementById("luchino").innerHTML=Math.round(area.x);
+	document.getElementById("luchina").innerHTML=Math.round(area.y);
 	if(area.x && area.y){
 	  component.x=area.x;
 	  component.y=area.y;
@@ -138,8 +138,8 @@ function funupdate(area, component){
 function calciapalla(area, component){
 	area.clear();
 	for(let i=0;i<frm['n'];i++) red[i].update();
-	document.getElementById("luchino").innerHTML=area.x;
-	document.getElementById("luchina").innerHTML=area.y;
+	document.getElementById("luchino").innerHTML=Math.round(area.x);
+	document.getElementById("luchina").innerHTML=Math.round(area.y);
 	if(area.x && area.y){
 	  component.x=area.x;
 	  component.y=area.y;
