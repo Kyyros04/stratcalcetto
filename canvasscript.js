@@ -49,17 +49,17 @@ class gestisciArea{
 	window.addEventListener('mouseup', function (e) {
 	   finespostaplayer(dao);
 	});
-	/*window.addEventListener('touchend', function (e) {
+	window.addEventListener('touchend', function (e) {
 	   finespostaplayer(dao);
-	});*/
+	});
 	window.addEventListener('mousemove', function (e) {
             myArea.x = e.pageX;
             myArea.y = e.pageY;
         });
-        /*window.addEventListener('touchstart', function (e) {
+        window.addEventListener('touchstart', function (e) {
             myArea.x = e.touches[0].screenX;
             myArea.y = e.touches[0].screenY;
-        });*/
+        });
 	
       }
 	else
