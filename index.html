@@ -1,0 +1,39 @@
+<!DOCTYPE html> <html lang="ita" id="htmltarget">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content"width=device-width">
+<script defer="true" type="text/javascript" src="canvasscript.js"></script>
+<title>Stategie</title>
+</head>
+<body onload="startArea()">
+
+<canvas id="mycanvas" width="840" height="500" style="border:1px solid #000000;">
+il tuo browser non supporta canvas
+</canvas>
+<br>
+<table>
+<thead><th></th><th>red</th><th></th><th></th><th>blue</th></thead>
+<tbody>
+<tr><td><button onclick="iniziospostaplayer(red[0])">Portiere</button></td>
+<td><textarea></textarea><td><td><button onclick="iniziospostaplayer(red[5])">Portiere</button></td>
+<td><textarea></textarea><td><tr>
+<tr><td><button onclick="iniziospostaplayer(red[1])">Difensore</button></td>
+<td><textarea></textarea><td><td><button onclick="iniziospostaplayer(red[6])">Difensore</button></td>
+<td><textarea></textarea><td><tr>
+<tr><td><button onclick="iniziospostaplayer(red[2])">Ala sinistra</button></td>
+<td><textarea></textarea><td><td><button onclick="iniziospostaplayer(red[7])">Ala sinistra</button></td>
+<td><textarea></textarea><td><tr>
+<tr><td><button onclick="iniziospostaplayer(red[3])">Ala destra</button></td>
+<td><textarea></textarea><td><td><button onclick="iniziospostaplayer(red[8])">Ala destra</button></td>
+<td><textarea></textarea><td><tr>
+<tr><td><button onclick="iniziospostaplayer(red[4])">Pivot</button></td>
+<td><textarea></textarea><td><td><button onclick="iniziospostaplayer(red[9])">Pivot</button></td>
+<td><textarea></textarea><td><tr>
+</tbody>
+</table>
+<br><button onclick="iniziospostaplayer(palla)">Palla</button><br>
+<label id="luchino">cordX</label>
+<label id="luchina">cordY</label>
+</body>
+</html>
+
