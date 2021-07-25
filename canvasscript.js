@@ -35,10 +35,10 @@ function pallone(x,y,r,color) {
 class gestisciArea{
     constructor(boh){
 	 this.canvas=document.getElementById("mycanvas");
-	 this.canvas.width=840;
-	 this.canvas.height=500;
+	 this.canvas.width=420;
+	 this.canvas.height=250;
 	 this.cx=this.canvas.getContext("2d");
-	 this.cx.drawImage(bgcanvas,0,0,840,500);
+	 this.cx.drawImage(bgcanvas,0,0,420,250);
 	 this.x;
 	 this.y;
 	 //disegna gli attori;
@@ -56,7 +56,7 @@ class gestisciArea{
             myArea.x = e.pageX;
             myArea.y = e.pageY;
         });
-        window.addEventListener('touchstart', function (e) {
+        window.addEventListener('touchmove', function (e) {
             myArea.x = e.touches[0].screenX;
             myArea.y = e.touches[0].screenY;
         });
@@ -86,7 +86,7 @@ class gestisciArea{
 	}
      clear(){
 	this.cx.clearRect(0,0,this.canvas.width,this.canvas.height);
-	this.cx.drawImage(bgcanvas,0,0,840,500);
+	this.cx.drawImage(bgcanvas,0,0,420,250);
 	}
      /*update(component){
 	//var comp=this.component;
@@ -103,7 +103,7 @@ class gestisciArea{
 
 function startArea(){
 	myArea= new gestisciArea("");
-	palla= new pallone(420,250,10,"black");
+	palla= new pallone(210,124,5,"black");
 	palla.update();	
 	for(let i=0;i<frm['n'];i++){
 		let j=i.toString();
@@ -148,18 +148,18 @@ function calciapalla(area, component){
 }
 
 var frm={
-	'0':{'w':25,'h':25,'c':'red','x':49,'y':240},
-	'1':{'w':25,'h':25,'c':'red','x':242,'y':239},
-	'2':{'w':25,'h':25,'c':'red','x':307,'y':117},
-	'3':{'w':25,'h':25,'c':'red','x':307,'y':353},
-	'4':{'w':25,'h':25,'c':'red','x':381,'y':238},
-	'5':{'w':25,'h':25,'c':'blue','x':767,'y':240},
-	'6':{'w':25,'h':25,'c':'blue','x':572,'y':239},
-	'7':{'w':25,'h':25,'c':'blue','x':517,'y':117},
-	'8':{'w':25,'h':25,'c':'blue','x':507,'y':353},
-	'9':{'w':25,'h':25,'c':'blue','x':434,'y':238},
+	'0':{'w':12,'h':12,'c':'red','x':24,'y':120},
+	'1':{'w':12,'h':12,'c':'red','x':120,'y':120},
+	'2':{'w':12,'h':12,'c':'red','x':150,'y':60},
+	'3':{'w':12,'h':12,'c':'red','x':150,'y':180},
+	'4':{'w':12,'h':12,'c':'red','x':187,'y':120},
+	'5':{'w':12,'h':12,'c':'blue','x':380,'y':120},
+	'6':{'w':12,'h':12,'c':'blue','x':285,'y':120},
+	'7':{'w':12,'h':12,'c':'blue','x':258,'y':60},
+	'8':{'w':12,'h':12,'c':'blue','x':258,'y':180},
+	'9':{'w':12,'h':12,'c':'blue','x':220,'y':120},
 	'n':10,
-	'p':{'w':25,'h':25,'c':'white','x':434,'y':238}
+	'p':{'w':25,'h':25,'c':'white','x':215,'y':119}
 };
 var bgcanvas = document.createElement("img");
 bgcanvas.src = "img/campocalcio.jpg";
